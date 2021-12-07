@@ -8,9 +8,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract RDR is ERC20, Ownable, ERC20Burnable, ERC20Pausable {
     using SafeMath for uint256;
-    uint256 private _totalTokens = 5 * 10**8 * 10**uint256(decimals());
+    uint256 private constant _totalTokens = 5 * 10**8 * 10**uint256(18);
 
-    constructor() ERC20("Golden West Token", "GWT") {
+    constructor() ERC20("Rise of Defenders Token", "RDR") {
         _mint(owner(), _totalTokens);
     }
 
